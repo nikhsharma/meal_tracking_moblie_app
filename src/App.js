@@ -10,7 +10,6 @@ class App extends Component {
       <div className="App">
         <SearchBar />
         <h2>Food Tracker</h2>
-        <Search />
         <Main />
       </div>
     );
