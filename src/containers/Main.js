@@ -4,7 +4,7 @@ import './Main.css'
 export default class Main extends Component {
   render() {
     return (
-      <div>
+      <div id='main'>
         <h1>Hello, Users Name</h1>
         <ul>
           <li>Daily</li>

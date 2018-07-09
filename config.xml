@@ -4,7 +4,7 @@
     <description>
         An app to track what you eat.
     </description>
-    <author email="nikhil_sharma@live.co.uk" href="http://nik-sharma.com">
+    <author>
         Nikhil Sharma
     </author>
     <content src="index.html" />
