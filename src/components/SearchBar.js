@@ -21,9 +21,10 @@ export default class SearchBar extends Component {
   render() {
     let display;
     if (this.state.showSearchResults) {
-      display = this.state.results.map(res => (
-        <p>{res.product_name_en}</p>
-      ))
+      display = <Search results={this.state.results}/>
+      // display = this.state.results.map(res => (
+      //   <p>{res.product_name_en}</p>
+      // ))
     }
     return (
       <div>
