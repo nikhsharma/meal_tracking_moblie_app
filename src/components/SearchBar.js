@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Search from '../containers/Search';
+import './SearchBar.css';
 
 export default class SearchBar extends Component {
   constructor(props) {
@@ -20,15 +21,16 @@ export default class SearchBar extends Component {
 
   render() {
     let display;
-    if (this.state.showSearchResults) {
+    if (this.state.showSearchResults && this.state.search !== '') {
       display = <Search results={this.state.results}/>
       // display = this.state.results.map(res => (
       //   <p>{res.product_name_en}</p>
       // ))
     }
     return (
-      <div>
-        <input id='search' type="text" onChange={() => this.setState({search: document.querySelector('#search').value})} />
+      <div id='search-bar'>
+        <h1>Logo</h1>
+        <input id='search' type="text" onChange={() => this.setState({search: document.querySelector('#search').value, showSearchResults: false})} />
         <input type="submit" value='Search' onClick={() => (
           this.search(document.querySelector('#search').value)
         )}/>
