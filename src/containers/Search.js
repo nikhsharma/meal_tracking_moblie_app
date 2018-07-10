@@ -8,6 +8,7 @@ export default class Search extends Component {
     return (
       <div>
         <p>Search Section</p>
+        <button onClick={this.props.stopSearch}> X </button>
         {searchResults}
       </div>
     )

@@ -13,6 +13,7 @@ export default class App extends Component {
       searchResults: []
     }
     this.search = this.search.bind(this);
+    this.stopSearch = this.stopSearch.bind(this);
   }
 
   search(text) {
@@ -21,10 +22,14 @@ export default class App extends Component {
     .then(data => this.setState({searchResults: data.products, searching: true}))
   }
 
+  stopSearch() {
+    this.setState({searching: false})
+  }
+
   render() {
     let display;
     if (this.state.searching) {
-      display = <Search results={this.state.searchResults}/>
+      display = <Search results={this.state.searchResults} stopSearch={this.stopSearch}/>
     } else {
       display = <Main />
     }
